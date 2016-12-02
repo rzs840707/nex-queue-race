@@ -187,4 +187,28 @@ public class HttpSessionWrapper implements HttpSession {
     public boolean isNew() {
         return Boolean.TRUE;
     }
+
+    protected void checkValid() throws IllegalStateException {
+        if (invalid) {
+            throw new IllegalStateException();
+        }
+    }
+
+    public boolean isDirty() {
+        return dirty;
+    }
+
+    public Map<String, Object> snapshot() {
+        Map<String, Object> snap = Maps.newHashMap();
+        snap.putAll(sessionStore);
+        snap.putAll(newAttributes);
+        for (String name : deleteAttribute) {
+            snap.remove(name);
+        }
+        return snap;
+    }
+
+    public boolean isValid() {
+        return !invalid;
+    }
 }
