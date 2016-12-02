@@ -3,6 +3,7 @@ package core;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -44,7 +45,55 @@ public class HttpServletRequestWrapper2 extends javax.servlet.http.HttpServletRe
         return doGetSession(true);
     }
 
-    private HttpSession doGetSession(boolean b) {
+    /**
+     * get session from session cookie name
+     *
+     * @param create
+     * @return
+     */
+    private HttpSession doGetSession(boolean create) {
+        if (session == null) {
+            Cookie cookie = WebUtil.findCookie(this, getSessionCookieName());
+            if (cookie != null) {
+                String value = cookie.getValue();
+                log.debug("discovery session id from cookie:{}", value);
+                session = buildSession(value, false);
+            } else {
+                session = buildSession(create);
+            }
+        }
+    }
+
+    /**
+     * build a new session without session id
+     *
+     * @param create
+     * @return
+     */
+    private HttpSessionWrapper buildSession(boolean create) {
+        if (create) {
+            session = buildSession(sessionManager.getSessionIdGenerator().generate(request), true);
+            log.debug("Build a new session[{}]", session.getId());
+            return session;
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * build a new session from session id
+     *
+     * @param id
+     * @param refresh
+     * @return
+     */
+    private HttpSessionWrapper buildSession(String id, boolean refresh) {
+        HttpSessionWrapper session = new HttpSessionWrapper(id, sessionManager, request.getServletContext());
+        session.setMaxInactiveInterval(maxInactiveInterval);
+        if (refresh) {
+            WebUtil.addCookie(this, response, getSessionCookieName(), id, getCookieDomain(), getCookieContextPath(), cookieMaxAge, true);
+        }
+        return session;
     }
 
     /**
