@@ -92,9 +92,30 @@ public class WebUtil {
     }
 
     private static void addCookie(HttpServletRequest request, HttpServletResponse response, String name, String value, String domain, int maxAge, boolean httpOnly, String contextPath) {
-        
+        if (request != null && response != null) {
+            Cookie cookie = new Cookie(name, value);
+            cookie.setMaxAge(maxAge);
+            cookie.setSecure(request.isSecure());
+            if (contextPath == null || contextPath.isEmpty()) {
+                cookie.setPath("/");
+            } else {
+                cookie.setPath(contextPath);
+            }
+            if (domain != null && !domain.isEmpty()) {
+                cookie.setDomain(domain);
+            }
+            if (httpOnly) {
+                cookie.setHttpOnly(true);
+            }
+
+            response.addCookie(cookie);
+            log.debug("Cookie update the sessionID.[name={},value={},maxAge={},httpOnly={},path={},domain={}]",
+                    cookie.getName(), cookie.getValue(), cookie.getMaxAge(), httpOnly, cookie.getPath(),
+                    cookie.getDomain());
+        }
     }
 
+    
     public static void failureCookie(HttpServletRequest httpRequest, HttpServletResponse httpResponse, String sessionCookieName, String cookieDomain, String cookieContextPath) {
     }
 }
