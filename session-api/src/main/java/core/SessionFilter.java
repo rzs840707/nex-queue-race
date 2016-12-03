@@ -143,14 +143,22 @@ public abstract class SessionFilter implements Filter {
                 //should flush to store
                 log.debug("try to flush session to session store");
                 Map<String, Object> snapshot = session.snapshot();
-                
-
+                if (sessionManager.persist(session.getId(), snapshot, maxInactiveInterval)) {
+                    log.debug("succeed to flush session{} to store, key is : {}", snapshot, session.getId());
+                } else {
+                    log.error("failed to persist session to redis");
+                    WebUtil.failureCookie(httpRequest, httpResponse, sessionCookieName, cookieDomain, cookieContextPath);
+                }
+            } else {
+                //refresh expire time
+                sessionManager.expire(session.getId(), maxInactiveInterval);
             }
         }
     }
 
     @Override
     public void destroy() {
-
+        sessionManager.destroy();
+        log.debug("filter is destroy!");
     }
 }
