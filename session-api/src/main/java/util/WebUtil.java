@@ -70,7 +70,31 @@ public class WebUtil {
         return null;
     }
 
-    
+    /**
+     * find cookie value
+     *
+     * @param request
+     * @param name
+     * @return
+     */
+    public static String findCookieValue(HttpServletRequest request, String name) {
+        Cookie cookie = findCookie(request, name);
+        return cookie != null ? cookie.getValue() : null;
+    }
+
+    public static void addCookie(HttpServletRequest request, HttpServletResponse response,
+                                 String name, String value, String domain, int maxAge, boolean httpOnly) {
+        String contextPath = request.getContextPath();
+        if (contextPath == null || contextPath.isEmpty()) {
+            contextPath = "/";
+        }
+        addCookie(request, response, name, value, domain, maxAge, httpOnly, contextPath);
+    }
+
+    private static void addCookie(HttpServletRequest request, HttpServletResponse response, String name, String value, String domain, int maxAge, boolean httpOnly, String contextPath) {
+        
+    }
+
     public static void failureCookie(HttpServletRequest httpRequest, HttpServletResponse httpResponse, String sessionCookieName, String cookieDomain, String cookieContextPath) {
     }
 }

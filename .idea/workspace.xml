@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a29a57c1-11df-47a8-b5dd-cf0c84f42840" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java" afterPath="$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java" />
     </list>
     <ignored path="aude-distributed-session.iws" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="WebUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1221">
-              <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+            <state relative-caret-position="1077">
+              <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -835,12 +836,12 @@
       <workItem from="1480640064359" duration="7301000" />
       <workItem from="1480691983492" duration="1155000" />
       <workItem from="1480696192469" duration="57000" />
-      <workItem from="1480751193894" duration="3703000" />
+      <workItem from="1480751193894" duration="4596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12623000" />
+    <option name="totallyTimeSpent" value="13516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1063" y="22" width="1294" height="1418" extended-state="0" />
@@ -1057,8 +1058,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+        <state relative-caret-position="1077">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
