@@ -31,8 +31,8 @@
       <file leaf-file-name="WebUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+            <state relative-caret-position="699">
+              <caret line="160" column="49" selection-start-line="160" selection-start-column="49" selection-end-line="160" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,7 +133,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1063" />
+    <option name="x" value="1201" />
     <option name="y" value="22" />
     <option name="width" value="1294" />
     <option name="height" value="1418" />
@@ -835,15 +835,15 @@
       <workItem from="1480640064359" duration="7301000" />
       <workItem from="1480691983492" duration="1155000" />
       <workItem from="1480696192469" duration="57000" />
-      <workItem from="1480751193894" duration="6197000" />
+      <workItem from="1480751193894" duration="7121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15117000" />
+    <option name="totallyTimeSpent" value="16041000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1063" y="22" width="1294" height="1418" extended-state="0" />
+    <frame x="1201" y="22" width="1294" height="1418" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1057,8 +1057,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+        <state relative-caret-position="699">
+          <caret line="160" column="49" selection-start-line="160" selection-start-column="49" selection-end-line="160" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
