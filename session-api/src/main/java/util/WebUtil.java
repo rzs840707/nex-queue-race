@@ -115,7 +115,34 @@ public class WebUtil {
         }
     }
 
-    
-    public static void failureCookie(HttpServletRequest httpRequest, HttpServletResponse httpResponse, String sessionCookieName, String cookieDomain, String cookieContextPath) {
+
+    /**
+     * failure a cookie
+     */
+    public static void failureCookie(HttpServletRequest request, HttpServletResponse response,
+                                     String name, String domain, String contextPath) {
+        if (request != null && response != null) {
+            addCookie(request, response, name, null, domain, 0, true, contextPath);
+        }
+    }
+
+    /**
+     * failure a cookie
+     */
+    public static void failureCookie(HttpServletRequest request,
+                                     HttpServletResponse response, String name, String domain) {
+        String contextPath = request.getContextPath();
+        if (contextPath == null || contextPath.isEmpty()) {
+            contextPath = "/";
+        }
+        failureCookie(request, response, name, domain, contextPath);
+    }
+
+    /**
+     * failure a cookie
+     */
+    public static void failureCookie(HttpServletRequest request,
+                                     HttpServletResponse response, String name) {
+        failureCookie(request, response, name, null);
     }
 }
