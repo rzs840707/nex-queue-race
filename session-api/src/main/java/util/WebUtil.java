@@ -3,6 +3,7 @@ package util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -48,7 +49,28 @@ public class WebUtil {
         return request.getRemoteAddr();
     }
 
+    /**
+     * find cookie from request
+     *
+     * @param request
+     * @param name
+     * @return
+     */
+    public static Cookie findCookie(HttpServletRequest request, String name) {
+        if (request != null) {
+            Cookie[] cookies = request.getCookies();
+            if (cookies != null && cookies.length > 0) {
+                for (Cookie cookie : cookies) {
+                    if (cookie.getName().equals(name)) {
+                        return cookie;
+                    }
+                }
+            }
+        }
+        return null;
+    }
 
+    
     public static void failureCookie(HttpServletRequest httpRequest, HttpServletResponse httpResponse, String sessionCookieName, String cookieDomain, String cookieContextPath) {
     }
 }
