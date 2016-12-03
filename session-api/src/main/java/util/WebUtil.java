@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * Created by lrkin on 2016/12/3.
@@ -145,4 +146,41 @@ public class WebUtil {
                                      HttpServletResponse response, String name) {
         failureCookie(request, response, name, null);
     }
+
+    /**
+     * get request full url, include params
+     *
+     * @param request current request
+     * @return request full url, include params
+     */
+    public static String getFullRequestUrl(HttpServletRequest request) {
+        StringBuilder buff = new StringBuilder(
+                request.getRequestURL().toString());
+        String queryString = request.getQueryString();
+        if (queryString != null) {
+            buff.append("?").append(queryString);
+        }
+
+        return buff.toString();
+    }
+
+
+    /**
+     * redirect to url
+     *
+     * @param response        HttpServletResponse object
+     * @param url             recirect url
+     * @param movePermanently true 301 for permanent redirect, false 302(temporary redirect)
+     * @throws java.io.IOException
+     */
+    public static void redirect(HttpServletResponse response, String url,
+                                boolean movePermanently) throws IOException {
+        if (!movePermanently) {
+            response.sendRedirect(url);
+        } else {
+            response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
+            response.setHeader("Location", url);
+        }
+    }
+
 }
