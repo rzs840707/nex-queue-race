@@ -1,8 +1,10 @@
 package core;
 
+import api.SessionManager;
 import me.hao0.common.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import util.WebUtil;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -139,19 +141,21 @@ public abstract class SessionFilter implements Filter {
                 //if invalidate , delete session
                 log.debug("session is invalid, will be deleted");
                 WebUtil.failureCookie(httpRequest, httpResponse, sessionCookieName, cookieDomain, cookieContextPath);
-            } else if (session.isDirty()) {
-                //should flush to store
-                log.debug("try to flush session to session store");
-                Map<String, Object> snapshot = session.snapshot();
-                if (sessionManager.persist(session.getId(), snapshot, maxInactiveInterval)) {
-                    log.debug("succeed to flush session{} to store, key is : {}", snapshot, session.getId());
-                } else {
-                    log.error("failed to persist session to redis");
-                    WebUtil.failureCookie(httpRequest, httpResponse, sessionCookieName, cookieDomain, cookieContextPath);
-                }
             } else {
-                //refresh expire time
-                sessionManager.expire(session.getId(), maxInactiveInterval);
+                if (session.isDirty()) {
+                    //should flush to store
+                    log.debug("try to flush session to session store");
+                    Map<String, Object> snapshot = session.snapshot();
+                    if (sessionManager.persist(session.getId(), snapshot, maxInactiveInterval)) {
+                        log.debug("succeed to flush session{} to store, key is : {}", snapshot, session.getId());
+                    } else {
+                        log.error("failed to persist session to redis");
+                        WebUtil.failureCookie(httpRequest, httpResponse, sessionCookieName, cookieDomain, cookieContextPath);
+                    }
+                } else {
+                    //refresh expire time
+                    sessionManager.expire(session.getId(), maxInactiveInterval);
+                }
             }
         }
     }

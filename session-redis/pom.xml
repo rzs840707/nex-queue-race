@@ -50,6 +50,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.audest</groupId>
+            <artifactId>session-api</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+
 
     </dependencies>
 

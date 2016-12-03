@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a29a57c1-11df-47a8-b5dd-cf0c84f42840" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/session-api/src/main/java/api/SessionManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session-api/src/main/java/core/HttpServletRequestWrapper2.java" afterPath="$PROJECT_DIR$/session-api/src/main/java/core/HttpServletRequestWrapper2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session-api/src/main/java/core/SessionFilter.java" afterPath="$PROJECT_DIR$/session-api/src/main/java/core/SessionFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session-redis/pom.xml" afterPath="$PROJECT_DIR$/session-redis/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session-redis/session-redis.iml" afterPath="$PROJECT_DIR$/session-redis/session-redis.iml" />
     </list>
     <ignored path="aude-distributed-session.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,41 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HttpSessionWrapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/HttpSessionWrapper.java">
+      <file leaf-file-name="WebUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2466">
-              <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpServletRequestWrapper2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/HttpServletRequestWrapper2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedisSessionFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/session-redis/src/main/java/RedisSessionFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionFilter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/SessionFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1113">
-              <caret line="161" column="37" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+            <state relative-caret-position="522">
+              <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,10 +77,12 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/session-api/src/main/java/core/HttpSessionWrapper.java" />
         <option value="$PROJECT_DIR$/session-api/src/main/java/core/HttpServletRequestWrapper.java" />
+        <option value="$PROJECT_DIR$/session-api/src/main/java/core/SessionFilter.java" />
         <option value="$PROJECT_DIR$/session-api/src/main/java/core/HttpServletRequestWrapper2.java" />
+        <option value="$PROJECT_DIR$/session-api/src/main/java/api/SessionManager.java" />
         <option value="$PROJECT_DIR$/session-redis/src/main/java/RedisSessionFilter.java" />
         <option value="$PROJECT_DIR$/session-redis/pom.xml" />
-        <option value="$PROJECT_DIR$/session-api/src/main/java/core/SessionFilter.java" />
+        <option value="$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java" />
       </list>
     </option>
   </component>
@@ -161,7 +139,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1261" />
+    <option name="x" value="1063" />
     <option name="y" value="22" />
     <option name="width" value="1294" />
     <option name="height" value="1418" />
@@ -369,7 +347,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,6 +374,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aude-distributed-session" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aude-distributed-session" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="session-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -833,19 +841,19 @@
       <workItem from="1480640064359" duration="7301000" />
       <workItem from="1480691983492" duration="1155000" />
       <workItem from="1480696192469" duration="57000" />
-      <workItem from="1480751193894" duration="2897000" />
+      <workItem from="1480751193894" duration="3533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11817000" />
+    <option name="totallyTimeSpent" value="12453000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1261" y="22" width="1294" height="1418" extended-state="0" />
+    <frame x="1063" y="22" width="1294" height="1418" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28035143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28035143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -886,7 +894,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3806#3807#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -910,7 +921,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3806#3807#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -934,7 +948,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3806#3807#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -983,48 +1000,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/session-redis/pom.xml">
+    <entry file="file://$PROJECT_DIR$/session-api/src/main/java/api/SessionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/session-api/pom.xml">
+    <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/SessionFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/HttpSessionWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2466">
-          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/HttpServletRequestWrapper2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+        <state relative-caret-position="-1785">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/session-redis/src/main/java/RedisSessionFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        <state relative-caret-position="54">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/SessionFilter.java">
+    <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/HttpServletRequestWrapper2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1113">
-          <caret line="161" column="37" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+        <state relative-caret-position="141">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/session-api/src/main/java/core/HttpSessionWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
+          <folding>
+            <element signature="e#3806#3807#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/session-redis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/session-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/session-api/src/main/java/util/WebUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
