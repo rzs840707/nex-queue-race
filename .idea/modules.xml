@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/aude-distributed-session.iml" filepath="$PROJECT_DIR$/aude-distributed-session.iml" />
-      <module fileurl="file://$PROJECT_DIR$/session-api/session-api.iml" filepath="$PROJECT_DIR$/session-api/session-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/session-demo/session-demo.iml" filepath="$PROJECT_DIR$/session-demo/session-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/session-redis/session-redis.iml" filepath="$PROJECT_DIR$/session-redis/session-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nex-queue-race.iml" filepath="$PROJECT_DIR$/nex-queue-race.iml" />
     </modules>
   </component>
 </project>
